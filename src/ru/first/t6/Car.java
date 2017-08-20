@@ -1,6 +1,6 @@
 package ru.first.t6;
 
-public class Car {
+public class Car implements Comparable<Car>{
 
     private String name;
 
@@ -39,5 +39,10 @@ public class Car {
     }
     public void showCar(){
         System.out.println("car");
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        return this.getName().compareTo(o.getName());
     }
 }
